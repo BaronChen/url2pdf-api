@@ -10,7 +10,7 @@ export class Url2PdfController {
     const page = await browser.newPage();
     await page.goto(url, { waitUntil: 'networkidle2' });
     await page.emulateMedia('screen');
-    let buffer = await page.pdf({ format: 'A4' });
+    let buffer = await page.pdf({ format: 'A4', printBackground: true });
     await browser.close();
     return buffer;
   }
