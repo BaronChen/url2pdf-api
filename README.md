@@ -1,20 +1,23 @@
 # Node Typescript Starter
 
-A starter boilerplate for node using koa and typescript.
+An example project that make puppeteer work with docker and typescript.
+
+build:
+```sh
+$ docker-compose -f docker-compose.yml build
+```
 
 start:
 ```sh
-$ npm start
+$ docker-compose -f docker-compose.yml up --build
 ```
+
+debug:
+```sh
+$ docker-compose -f docker-compose.debug.yml up --build
+```
+
 test:
 ```sh
-$ npm test
-```
-Run with debug:
-```sh
-$ npm run start-debug
-```
-Run with debug and watching change:
-```sh
-$ npm run start-watch
+$ docker-compose -f docker-compose.test.yml up --build
 ```
