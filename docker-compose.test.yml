@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  url2pdf-api:
+    image: url2pdf-api
+    build: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+    ## set your startup file here
+    command: npm test
